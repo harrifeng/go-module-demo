@@ -1,12 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"os"
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {
-
-	fmt.Println("hello")
-	os.Exit(0)
+	log.WithFields(log.Fields{
+		"animal": "walrus",
+	}).Info("A walrus appears")
 }
